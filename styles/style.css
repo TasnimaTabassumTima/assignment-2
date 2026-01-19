@@ -122,15 +122,82 @@ body{
     margin-bottom: 16px;
     /* padding: 0 20px; */
 }
-.about-footer .about-content .about-namee{
+.about-footer .about-content .about-name{
     color: rgba(255, 255, 255, 0.8);
     font-weight: 400;
 }
 
-/*  */
+/* choose section */
+.choose{
+    background-color: #230E3D;
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+.choose-parent .title{
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+#id1{
+    grid-area: id1;
+    padding: 107px 40px;
+}
+#id2{
+    grid-area: id2;
+    padding: 40px;
+}
+#id3{
+    grid-area: id3;
+    padding: 40px;
+}
+#id4{
+    grid-area: id4;
+    padding: 40px;
+}
+#id5{
+    grid-area: id5;
+    padding: 40px;
+}
+.choose-parent .techwave-cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    grid-template-areas: 
+    "id1 id2 id2"
+    "id1 id3 id3"
+    "id4 id4 id5";
+}
+.techwave{
+    background-color: #351165;
+    border-radius: 40px;
+    text-align: start;
+}
+.techwave-cards .wave-icon{
+    margin-bottom: 16px;
+    max-width: 60px;
+    max-height: 60px;
+}
+#id4 i{
+    font-size: 3rem;
+    max-width: 60px;
+    max-height: 60px;
+}
+.techwave-cards .wave-name{
+    margin-bottom: 16px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.8);
+}
+.techwave-cards .wave-description{
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.6);
+}
+
 
 /* small device */
 @media screen and (max-width: 576px){
+    .title{
+        font-size: 2rem;
+    }
     .navigation-bar .links ul,
     .navigation .btn{
         display: none;
@@ -159,10 +226,26 @@ body{
         gap: 40px;
         margin-bottom: 40px;
     }
+    .choose-parent .techwave-cards{
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: 
+        "id1"
+        "id2"
+        "id3"
+        "id4"
+        "id5";
+    }
+    .techwave{
+        max-width: 400px;
+        margin: 0 20px;
+    }
+    #id1, #id2, #id3, #id4, #id5{
+        padding: 24px;
+    }
 }
 
 /* medium device */
-@media screen and (min-width: 576px) and (max-width: 992px){
+/* @media screen and (min-width: 576px) and (max-width: 992px){
     .navigation-bar .links ul,
     .navigation .btn{
         display: none;
@@ -176,9 +259,21 @@ body{
         height: 24px;
         margin-right: 20px;
     }
-}
+} */
 
 /* large device */
 @media screen and (max-width: 992px){
-    
+    .navigation-bar .links ul,
+    .navigation .btn{
+        display: none;
+    }
+    .navigation-bar .humburger{
+        display: flex;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        width: 24px;
+        height: 24px;
+        margin-right: 20px;
+    }
 }
