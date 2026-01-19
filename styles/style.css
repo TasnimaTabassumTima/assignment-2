@@ -44,6 +44,18 @@ body{
 .center{
     text-align: center;
 }
+.name{
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: rgba(255, 255, 255, 0.8);
+}
+.description{
+    font-weight: 400;
+    line-height: 20px;
+    margin-bottom: 12px;
+    color: rgba(255, 255, 255, 0.6);
+}
 
 /* navigation bar*/
 .navigation{
@@ -181,16 +193,6 @@ body{
     max-width: 60px;
     max-height: 60px;
 }
-.techwave-cards .wave-name{
-    margin-bottom: 16px;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: rgba(255, 255, 255, 0.8);
-}
-.techwave-cards .wave-description{
-    font-weight: 400;
-    color: rgba(255, 255, 255, 0.6);
-}
 
 /* feature section */
 .feature-parent .title{
@@ -205,7 +207,6 @@ body{
 .feature-cards .card{
     max-width: 380px;
     max-height: 440px;
-    border: 1px solid tomato;
     border-radius: 12px;
     text-align: left;
     background-color: #250D44;
@@ -220,24 +221,51 @@ body{
     text-align: left;
     padding: 24px;
 }
-.card .info .name{
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 12px;
-    color: rgba(255, 255, 255, 0.8);
-}
-.card .info .description{
-    font-weight: 400;
-    line-height: 20px;
-    margin-bottom: 12px;
-    color: rgba(255, 255, 255, 0.6);
-}
 .card .info .watch-time{
     display: flex;
     gap: 6px;
     color: #00FF88;
     font-weight: 600;
 }
+
+/* meet section */
+.meet-card{
+    display: flex;
+    gap: 24px;
+    padding: 40px;
+    border-radius: 40px;
+    background-color: #250D44;
+    margin-bottom: 120px;
+}
+.meet-img{
+    max-width: 200px;
+    max-height: 200px;
+}
+.meet-info{
+    text-align: left;
+}
+.social-links ul{
+    list-style: none;
+    display: flex;
+    gap: 8px;
+    margin-top: 16px;
+}
+.social-links ul li{
+    max-width: 40px;
+    max-height: 40px;
+    border: 1px solid #533C72;
+    border-radius: 30px;
+    padding: 12.5px;
+}
+.social-links ul li a{
+    /* background-color: #533C72;
+    border: 1px solid #7756a367;
+    border-radius: 50%; */
+    font-size: 15px;
+    max-width: 16px;
+    max-height: 16px;
+}
+
 
 
 /* small device */
@@ -284,6 +312,16 @@ body{
     }
     #id1, #id2, #id3, #id4, #id5{
         padding: 24px;
+    }
+    .meet-card{
+        flex-direction: column;
+        gap: 24px;
+    }
+    .meet-img{
+        margin: 0 auto;
+    }
+    .meet-info{
+        text-align: center;
     }
 }
 
