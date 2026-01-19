@@ -192,6 +192,53 @@ body{
     color: rgba(255, 255, 255, 0.6);
 }
 
+/* feature section */
+.feature-parent .title{
+    margin-bottom: 40px;
+}
+.feature-cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+.feature-cards .card{
+    max-width: 380px;
+    max-height: 440px;
+    border: 1px solid tomato;
+    border-radius: 12px;
+    text-align: left;
+    background-color: #250D44;
+    overflow: hidden;
+}
+.feature-cards .card iframe{
+    width: 100%;
+    /* max-height: 214px; */
+    /* object-fit: cover; */
+}
+.card .info{
+    text-align: left;
+    padding: 24px;
+}
+.card .info .name{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 12px;
+    color: rgba(255, 255, 255, 0.8);
+}
+.card .info .description{
+    font-weight: 400;
+    line-height: 20px;
+    margin-bottom: 12px;
+    color: rgba(255, 255, 255, 0.6);
+}
+.card .info .watch-time{
+    display: flex;
+    gap: 6px;
+    color: #00FF88;
+    font-weight: 600;
+}
+
 
 /* small device */
 @media screen and (max-width: 576px){
@@ -210,10 +257,6 @@ body{
         width: 24px;
         height: 24px;
         margin-right: 20px;
-    }
-    .about .about-header{
-        max-width: 400px;
-        text-align: center;
     }
     .about .about-header .about-description{
         margin-bottom: 40px;
@@ -245,7 +288,7 @@ body{
 }
 
 /* medium device */
-/* @media screen and (min-width: 576px) and (max-width: 992px){
+@media screen and (min-width: 576px) and (max-width: 992px){
     .navigation-bar .links ul,
     .navigation .btn{
         display: none;
@@ -259,7 +302,12 @@ body{
         height: 24px;
         margin-right: 20px;
     }
-} */
+    .about .about-footer{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+        margin-bottom: 40px;
+    }
+}
 
 /* large device */
 @media screen and (max-width: 992px){
@@ -275,5 +323,22 @@ body{
         width: 24px;
         height: 24px;
         margin-right: 20px;
+    }
+
+    .choose-parent .techwave-cards{
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: 
+        "id1"
+        "id2"
+        "id3"
+        "id4"
+        "id5";
+    }
+    .techwave{
+        max-width: 100%;
+        margin: 0 20px;
+    }
+    #id1, #id2, #id3, #id4, #id5{
+        padding: 24px;
     }
 }
