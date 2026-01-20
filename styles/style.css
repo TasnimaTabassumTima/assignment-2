@@ -76,8 +76,9 @@ body{
     font-weight: bold;
 }
 .wave{
-    color: #FB09B4;
-    /* background: linear-gradient(to right top,#F7E93F #FB09B4 #9100F8) ; */
+    background: linear-gradient(30deg, #F7E93F, #FB09B4, #9100F8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .navigation-bar .links ul{
     list-style: none;
@@ -179,10 +180,11 @@ body{
     opacity: 10%;
 }
 .about .about-footer{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    /* grid-template-columns: repeat(4, 1fr); */
     gap: 80px;
     margin-bottom: 120px;
+    justify-content: center;
 }
 .about-footer .about-content .about-num{
     color: #00FF88 ;
@@ -221,7 +223,7 @@ body{
 }
 #id4{
     grid-area: id4;
-    padding: 40px;
+    padding: 40px;  
 }
 #id5{
     grid-area: id5;
@@ -250,6 +252,9 @@ body{
     font-size: 3rem;
     max-width: 60px;
     max-height: 60px;
+    background: linear-gradient(30deg, #F7E93F, #FB09B4, #9100F8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /* feature section */
@@ -324,6 +329,49 @@ body{
     max-height: 16px;
 }
 
+/* footer section */
+footer{
+    background-image: url("../assets/footer-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    padding: 120px;
+    background-position: center;
+    width: 100%;
+    /* min-height: 412px; */
+}
+.footer-content-parent{
+    text-align: center;
+}
+.footer-content-parent .normal{
+    font-size: 4rem;
+    font-weight: 800;
+    color: #FFFFFF;
+}
+.footer-content-parent .linear{
+    font-size: 4rem;
+    font-weight: 800;
+    background: linear-gradient(30deg, #F7E93F, #FB09B4, #9100F8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.footer-content-parent ul{
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    margin: 32px auto;
+    justify-content: center;
+}
+.footer-content-parent ul li{
+    display: flex;
+    gap: 8px;
+    align-items: center;   
+}
+.platform-name{
+    color: rgba(255, 255, 255, 0.6) ;
+    font-weight: 500;
+}
+
 
 
 /* small device */
@@ -344,47 +392,7 @@ body{
         height: 24px;
         margin-right: 20px;
     }
-    .about .about-header .about-description{
-        margin-bottom: 40px;
-    }
-    .about .about-content-parent hr{
-        margin-bottom: 40px;
-    }
-    .about .about-footer{
-        grid-template-columns: repeat(2, 1fr);
-        gap: 40px;
-        margin-bottom: 40px;
-    }
-    .choose-parent .techwave-cards{
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-areas: 
-        "id1"
-        "id2"
-        "id3"
-        "id4"
-        "id5";
-    }
-    .techwave{
-        max-width: 400px;
-        margin: 0 20px;
-    }
-    #id1, #id2, #id3, #id4, #id5{
-        padding: 24px;
-    }
-    .feature-cards{
-        flex-direction: column;
-        justify-self: center;
-    }
-    .meet-card{
-        flex-direction: column;
-        gap: 24px;
-    }
-    .meet-img{
-        margin: 0 auto;
-    }
-    .meet-info{
-        text-align: center;
-    }
+
     .banner{
         /* background-repeat: no-repeat; */
         /* background-size: cover; */
@@ -413,6 +421,70 @@ body{
         height: 70px;
         position: relative;
     }
+
+    .about .about-header .about-description{
+        margin-bottom: 40px;
+    }
+    .about .about-content-parent hr{
+        margin-bottom: 40px;
+    }
+    .about .about-footer{
+        /* grid-template-columns: repeat(2, 1fr); */
+        /* gap: 40px; */
+        justify-content: space-between;
+        margin: 0 20px 40px;
+    }
+
+    .choose-parent .techwave-cards{
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: 
+        "id1"
+        "id2"
+        "id3"
+        "id4"
+        "id5";
+    }
+    .techwave{
+        max-width: 400px;
+        margin: 0 20px;
+    }
+    #id1, #id2, #id3, #id4, #id5{
+        padding: 24px;
+    }
+
+    .feature-cards{
+        flex-direction: column;
+        justify-self: center;
+    }
+
+    .meet-card{
+        flex-direction: column;
+        gap: 24px;
+    }
+    .meet-img{
+        margin: 0 auto;
+    }
+    .meet-info{
+        text-align: center;
+    }
+
+    footer{
+        padding: 40px 20px;
+    }
+    footer h3{
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .platforms ul{
+        display: flex;
+        gap: 16px;
+        margin: 24px auto;
+    }
+    .social-links ul,  .platforms ul, .about-footer{
+        flex-wrap: wrap;
+        justify-content: center;
+    } 
 }
 
 /* medium device */
@@ -452,7 +524,7 @@ body{
         height: 24px;
         margin-right: 20px;
     }
-
+    
     .choose-parent .techwave-cards{
         grid-template-columns: repeat(1, 1fr);
         grid-template-areas: 
