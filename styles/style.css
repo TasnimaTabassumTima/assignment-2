@@ -30,6 +30,10 @@ body{
     display: flex;
     gap: 4px;
     align-items: center;
+    transition: transform 1s;
+}
+.btn:hover{
+    transform: scale(1.1);
 }
 .width{
     max-width: 1200px;
@@ -74,6 +78,13 @@ body{
 .logo{
     font-size: 3rem;
     font-weight: bold;
+    transition: transform 1s;
+}
+.logo:hover{
+    font-size: 3rem;
+    font-weight: 900;
+    position: relative;
+    transform: scale(2) translate(80px);   
 }
 .wave{
     background: linear-gradient(30deg, #F7E93F, #FB09B4, #9100F8);
@@ -125,6 +136,11 @@ body{
     top: 16px;
     right: 120px;
     z-index: 1;
+    cursor: pointer;
+    transition: transform 1s;
+}
+.banner-content-parent .new:hover{
+    transform: scale(1.2);
 }
 .banner-content-parent .bg{
     width: 350px;
@@ -180,8 +196,9 @@ body{
     opacity: 10%;
 }
 .about .about-footer{
-    display: flex;
-    /* grid-template-columns: repeat(4, 1fr); */
+    /* display: flex; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 80px;
     margin-bottom: 120px;
     justify-content: center;
@@ -274,6 +291,11 @@ body{
     text-align: left;
     background-color: #250D44;
     overflow: hidden;
+    transition: transform 1s;
+}
+.feature-cards .card:hover{
+    border: 1px solid tomato;
+    transform: scale(1.1);
 }
 .feature-cards .card iframe{
     width: 100%;
@@ -319,6 +341,11 @@ body{
     border: 1px solid #533C72;
     border-radius: 30px;
     padding: 12.5px;
+    cursor: pointer;
+    transition: transform 1s;
+}
+.social-links ul li:hover{
+    transform: scale(1.2);
 }
 .social-links ul li a{
     /* background-color: #533C72;
@@ -365,7 +392,8 @@ footer{
 .footer-content-parent ul li{
     display: flex;
     gap: 8px;
-    align-items: center;   
+    align-items: center;  
+    cursor: pointer; 
 }
 .platform-name{
     color: rgba(255, 255, 255, 0.6) ;
@@ -429,9 +457,9 @@ footer{
         margin-bottom: 40px;
     }
     .about .about-footer{
-        /* grid-template-columns: repeat(2, 1fr); */
-        /* gap: 40px; */
-        justify-content: space-between;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+        /* justify-content: space-between; */
         margin: 0 20px 40px;
     }
 
